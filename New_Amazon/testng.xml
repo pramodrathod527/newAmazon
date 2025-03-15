@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Regression" parallel="tests" >
+    <test thread-count="5" name="ChromeTest" enabled="true">
+        <parameter name="browser" value="chrome"/>  
+        <parameter name="version" value="latest"/> 
+        <parameter name="platform" value="Windows 10"/> 
+        <classes>
+            <class name="AmazonTestClass.AmazonLogin"/>
+            <class name="AmazonTestClass.CreateAccountPageTest"/>
+            <class name="AmazonTestClass.SearchAndVerifyProduct"/>
+            <class name="AmazonTestClass.SignInPageTest"/> 
+        </classes>
+    </test>
+    
+    
+    <test thread-count="5" name="FirefoxTest" enabled="false">
+        <parameter name="browser" value="firefox"/>  
+        <parameter name="version" value="latest"/> 
+        <parameter name="platform" value="Windows 10"/>   
+        <classes>
+            <class name="AmazonTestClass.AmazonLogin"/>
+   <!--         <class name="AmazonTestClass.CreateAccountPageTest"/>
+            <class name="AmazonTestClass.SearchAndVerifyProduct"/>
+            <class name="AmazonTestClass.SignInPageTest"/> -->
+        </classes>
+    </test>
+</suite>

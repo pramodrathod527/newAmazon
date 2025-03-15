@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Regression]" guice-stage="DEVELOPMENT">
+  <test parallel="tests" name="ChromeTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="version" value="latest"/>
+    <parameter name="platform" value="windows 10"/>
+    <classes>
+      <class name="AmazonTestClass.AmazonLogin">
+        <methods>
+          <include name="amazon_login"/>
+          <include name="browserInitialize"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- AmazonTestClass.AmazonLogin -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+</suite> <!-- Failed suite [Regression] -->
