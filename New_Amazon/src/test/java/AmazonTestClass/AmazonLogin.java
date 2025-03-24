@@ -24,10 +24,10 @@ public class AmazonLogin {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://www.amazon.in/");
 
-        AmazonHomePage amazonHomePage = new AmazonHomePage(driver);
-        amazonHomePage.clickAccountAndList();
+//        AmazonHomePage amazonHomePage = new AmazonHomePage(driver);
+//        amazonHomePage.clickAccountAndList();
 
-        System.out.println(driver.getTitle());
+        System.out.println("Login Page: "+ driver.getTitle());
     }
 
     @AfterMethod
